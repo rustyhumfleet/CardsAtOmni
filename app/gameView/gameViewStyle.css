@@ -1,0 +1,42 @@
+/* gameView css stylesheet */
+
+.textCard  {
+  color:white;
+  background-color:black;
+}
+
+.btn.card {
+  color:black;
+  background-color:white;
+}
+
+.deck.card {
+  color:white;
+  background-color:black;
+}
+
+.card {
+  position: relative;  
+  border: .25rem solid black;
+  border-radius: .25rem;
+  width: 169px;
+  height: 232px;
+  /*
+  padding: $gutter;
+  margin: 0 2*$gutter 2*$gutter 0;
+  float: left;
+  span {
+    float: left;
+    clear: left;
+  }
+  .right-block {
+    float: right;
+    clear: right;
+  }*/
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
