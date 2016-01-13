@@ -1,18 +1,33 @@
 /* gameView css stylesheet */
 
-.textCard  {
-  color:white;
-  background-color:black;
+.custom.card {
+  color:black;
+  background-color:white;
+  text-align: left;
+  font-size: larger;
 }
 
 .btn.card {
   color:black;
   background-color:white;
+  text-align: left;
+  font-size: larger;
 }
 
 .deck.card {
   color:white;
   background-color:black;
+}
+
+.question.card {
+  color:black;
+  background-color: rgb(51, 204, 255);
+}
+
+.trash.card {
+  color: black;
+  background-color: gray;
+  text-align: center;
 }
 
 .card {

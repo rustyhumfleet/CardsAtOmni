@@ -12,3 +12,7 @@ angular.module('myApp.gameView', ['ngRoute'])
 .controller('gameViewCtrl', [function() {
 
 }]);
+
+function playerCardClicked() {
+	
+};
