@@ -6,7 +6,21 @@ angular.module('myApp', [
   'myApp.gameView',
   'myApp.view2',
   'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/gameView'});
+])
+.config(['$routeProvider', function($routeProvider) {
+  
+  $routeProvider.when('/home', {
+      templateUrl: 'index.html',
+      //controller: 'gameViewCtrl'
+  })
+  .when('/gameView', {
+      templateUrl: 'components/gameView/gameView.html',
+      controller: 'gameViewCtrl'
+    })
+  .when('/view2', {
+    templateUrl: 'components/view2/view2.html',
+    controller: 'View2Ctrl'
+  })
+  .otherwise({redirectTo: '/'});
 }]);
+
