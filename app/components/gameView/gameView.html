@@ -6,9 +6,9 @@
 	<div class="row">
 		<div class="col-sm-3"><div class="deck card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
 		
-		<div class="col-sm-2"><div class="question card"><h2>Robert Robernie</br>Is Just The<br>________.</h2></div></div>
+		<div class="col-sm-2"><div class="question card"><h2>Generally, Robert</br>______</br>Too Much.</h2></div></div>
 		
-		<div class="col-sm-3"><textarea ng-class="gameViewStyle" class="custom card" cols="20" rows="10">User Selection Will Show Here</textarea></div>
+		<div class="col-sm-3"><textarea ng-class="gameViewStyle" class="custom card" cols="20" rows="10">{{ selectedCard }}</textarea></div>
 
 		<div class="col-sm-2"><div class="trash card"><h2><br>Trash<br>Cards<br>Here</h2></div></div>
 
@@ -18,13 +18,17 @@
 	</br>
 
 	<div class="row">
-		<div class="col-sm-2"><div class="btn card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
-		<div class="col-sm-2"><button class="btn card" ng-click="count = count + 1" ng-init="count=0">Increment {{ count }}</button></div>
-		<div class="col-sm-2"><div class="btn card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
-		<div class="col-sm-2"><div class="btn card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
-		<div class="col-sm-2"><div class="btn card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
-		<div class="col-sm-2"><div class="btn card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
+		<div class="btn card" ng-repeat="card in deckOfCards" ng-click="playerCardClicked(this.card.id);" ng-show="card.selected == false">{{card.message}}</div>
 	</div>
+	<button class="btn btn-primary" ng-click="reset();">Reset</button>
+<!--
+		<div class="col-sm-2"><div class="btn card" ng-click="playerCardClicked(this.count);">id:{{ count }}  {{ cardMessage }}</div></div>-->
+		<!-- <div class="col-sm-2"><button class="btn card" ng-click="count = count + 1" ng-init="count=0">Increment {{ count }}</button></div> 
+		<div class="col-sm-2"><div class="btn card" ng-click="playerCardClicked(0)"><h2>Cards</br>At<br>Omnispear</h2></div></div>
+		<div class="col-sm-2"><div class="btn card" ng-click="playerCardClicked"><h2>Cards</br>At<br>Omnispear</h2></div></div>
+		<div class="col-sm-2"><div class="btn card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
+		<div class="col-sm-2"><div class="btn card"><h2>Cards</br>At<br>Omnispear</h2></div></div>-->
+	
 
 
 <br><br><br><br><br>
