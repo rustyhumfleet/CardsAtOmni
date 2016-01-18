@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+  'myApp.home',
   'myApp.gameView',
   'myApp.view2',
   'myApp.version'
@@ -10,8 +11,8 @@ angular.module('myApp', [
 .config(['$routeProvider', function($routeProvider) {
   
   $routeProvider.when('/home', {
-      templateUrl: 'index.html',
-      //controller: 'gameViewCtrl'
+      templateUrl: 'components/home/home.html',
+      controller: 'homeCtrl'
   })
   .when('/gameView', {
       templateUrl: 'components/gameView/gameView.html',
@@ -21,6 +22,6 @@ angular.module('myApp', [
     templateUrl: 'components/view2/view2.html',
     controller: 'View2Ctrl'
   })
-  .otherwise({redirectTo: '/'});
+  .otherwise({redirectTo: '/home'});
 }]);
 

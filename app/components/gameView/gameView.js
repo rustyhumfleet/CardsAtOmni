@@ -4,7 +4,7 @@ angular
 	.module('myApp.gameView', ['ngRoute'])
 	.controller('gameViewCtrl', [function($scope) {
 //controller logic here
-	$scope.message = 'This is the gameViewCtrl';
+	//$scope.message = 'This is the gameViewCtrl';
 }]);
 
 /*
