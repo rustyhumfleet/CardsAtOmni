@@ -6,13 +6,13 @@
 	<div class="row">
 		<div class="col-sm-3"><div class="deck card"><h2>Cards</br>At<br>Omnispear</h2></div></div>
 		
-		<div class="col-sm-2"><div class="question card"><h2>Generally, Robert</br>______</br>Too Much.</h2></div></div>
+		<div class="col-sm-2"><div class="question card" ng-model="questionCard"><h2>Generally, Robert</br>______</br>Too Much.</h2></div></div>
 		
-		<div class="col-sm-3"><textarea ng-class="gameViewStyle" class="custom card" cols="20" rows="10">{{ selectedCard }}</textarea></div>
+		<div class="col-sm-3"><textarea ng-class="gameViewStyle" ng-model="selectedCard.message" class="custom card" cols="20" rows="10">{{ selectedCard.message }}</textarea></div>
 
 		<div class="col-sm-2"><div class="trash card"><h2><br>Trash<br>Cards<br>Here</h2></div></div>
 
-		<div class="col-sm-2"><textarea ng-class="gameViewStyle" class="custom card" cols="20" rows="10">Fill in the text for a custom card.</textarea></div>
+		<div class="col-sm-2"><textarea ng-class="gameViewStyle" ng-click="setMessage(this.customCard)" ng-model="customCard.message" class="custom card" cols="20" rows="10">{{customCard.message}}</textarea><button class="btn btn-primary" ng-click="selectCustomCard(this.customCard)">Select Card</button></div>
 	</div>
 
 	</br>
